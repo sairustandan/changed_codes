@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "277068519836",
+    "firebase_url": "https://fyp-face-detect.firebaseio.com",
+    "project_id": "fyp-face-detect",
+    "storage_bucket": "fyp-face-detect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277068519836:android:eb705c9a748ca69d50d059",
+        "android_client_info": {
+          "package_name": "com.developndesign.firebaseautomlvisionedge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277068519836-k2lig79a9evmo9jjfm2t7ohj2aq4gbh6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_pSej14Qak4cQqT-A8BDkYGC_2qUJI9Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277068519836-k2lig79a9evmo9jjfm2t7ohj2aq4gbh6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

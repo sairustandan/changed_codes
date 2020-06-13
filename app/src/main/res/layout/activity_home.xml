@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home">
+
+    <TextView
+        android:id="@+id/TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/chewy"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="Criminal Face Detection"
+        android:textColor="#FBFCFC"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/TextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextView"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-9dp"
+        android:layout_marginRight="-2dp"
+        android:fontFamily="@font/chewy"
+        android:gravity="center"
+        android:padding="1dp"
+        android:text="DETECT FACES"
+        android:textColor="#FBFCFC"
+        android:textSize="25dp" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="189dp"
+        android:layout_height="208dp"
+        android:layout_above="@+id/selectImage"
+        android:layout_below="@+id/TextView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp" />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/selectImage"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="-17dp"
+        android:layout_marginRight="229dp"
+        android:layout_marginBottom="-263dp"
+        android:background="#000000"
+        android:textColor="#FBFCFC"
+        android:fontFamily="@font/chewy"
+        android:text="Search" />
+
+    <Button
+        android:id="@+id/btn_signout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/selectImage"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="-265dp"
+        android:textColor="#FBFCFC"
+        android:fontFamily="@font/chewy"
+        android:background="#000000"
+        android:text="Sign Out" />
+
+    <Button
+        android:id="@+id/selectImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Select Image !" />
+
+    <TextView
+        android:id="@+id/text"
+        android:textColor="#FBFCFC"
+        android:fontFamily="@font/chewy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="18dp" />
+</RelativeLayout>
