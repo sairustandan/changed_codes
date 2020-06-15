@@ -52,8 +52,8 @@
         android:layout_marginTop="-17dp"
         android:layout_marginRight="229dp"
         android:layout_marginBottom="-263dp"
-        android:background="#000000"
-        android:textColor="#FBFCFC"
+        android:background="@drawable/button_states"
+        android:textColor="#000000"
         android:fontFamily="@font/chewy"
         android:text="Search" />
 
@@ -66,17 +66,19 @@
         android:layout_centerHorizontal="true"
         android:layout_marginRight="26dp"
         android:layout_marginBottom="-265dp"
-        android:textColor="#FBFCFC"
+        android:textColor="#000000"
         android:fontFamily="@font/chewy"
-        android:background="#000000"
+        android:background="@drawable/button_states"
         android:text="Sign Out" />
 
     <Button
         android:id="@+id/selectImage"
-        android:layout_width="wrap_content"
+        android:fontFamily="@font/chewy"
+        android:background="@drawable/button_states"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Select Image !" />
+        android:text="DETECT FACES !" />
 
     <TextView
         android:id="@+id/text"

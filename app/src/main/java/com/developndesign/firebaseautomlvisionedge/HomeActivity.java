@@ -35,15 +35,15 @@ import java.io.IOException;
 import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
-    FirebaseAutoMLRemoteModel remoteModel; // For loading the model remotely
-    FirebaseVisionImageLabeler labeler; //For running the image labeler
-    FirebaseVisionOnDeviceAutoMLImageLabelerOptions.Builder optionsBuilder; // Which option is use to run the labeler local or remotely
-    ProgressDialog progressDialog; //Show the progress dialog while model is downloading...
-    FirebaseModelDownloadConditions conditions; //Conditions to download the model
-    FirebaseVisionImage image; // preparing the input image
-    TextView textView; // Displaying the label for the input image
-    Button button; // To select the image from device
-    ImageView imageView; //To display the selected image
+    FirebaseAutoMLRemoteModel remoteModel; // loads the model remotely
+    FirebaseVisionImageLabeler labeler; //image labeler run garna
+    FirebaseVisionOnDeviceAutoMLImageLabelerOptions.Builder optionsBuilder; // labeler run local or remotely
+    ProgressDialog progressDialog; //while model is downloading progress dialogue shows
+    FirebaseModelDownloadConditions conditions; //model download hune condition
+    FirebaseVisionImage image; // image input lai prepare
+    TextView textView; // label displayed
+    Button button; // image selection from device
+    ImageView imageView; //selected image displayed
     private FirebaseAutoMLLocalModel localModel;
 
     Button btn_logout, btn_search;
@@ -121,9 +121,9 @@ public class HomeActivity extends AppCompatActivity {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK) {
                 if (result != null) {
-                    Uri uri = result.getUri(); //path of image in phone
-                    imageView.setImageURI(uri); //set image in imageview
-                    textView.setText(""); //so that previous text don't get append with new one
+                    Uri uri = result.getUri(); //image path in phone
+                    imageView.setImageURI(uri); //image view set
+                    textView.setText(""); //previous text wont append with new one
                       setLabelerFromLocalModel(uri);
                    // setLabelerFromRemoteLabel(uri);
                 } else
@@ -174,10 +174,7 @@ public class HomeActivity extends AppCompatActivity {
                     float confidence = label.getConfidence();
                     textView.append(eachlabel + " - " + ("" + confidence * 100).subSequence(0, 4) + "%" + "\n\n");
                 }
-//                Intent intent = new Intent();
-//                intent.setAction(Intent.ACTION_VIEW);
-//                intent.setData(Uri.parse("https://www.google.com/search?q=" + task.getResult().get(0).getText()));
-//                startActivity(intent);
+
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -189,10 +186,10 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void fromRemoteModel() {
-        progressDialog.show();                                         /* model name*/
-        remoteModel = new FirebaseAutoMLRemoteModel.Builder("Flowers_2020124223430").build();
+        progressDialog.show();
+        remoteModel = new FirebaseAutoMLRemoteModel.Builder("Flowers_2020124223430").build(); //model name
         conditions = new FirebaseModelDownloadConditions.Builder().requireWifi().build();
-        //first download the model
+
         FirebaseModelManager.getInstance().download(remoteModel, conditions)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
